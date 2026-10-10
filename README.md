@@ -2,7 +2,7 @@
 
 A dark Visual Studio Code theme with signature **mint #00FF99** accents, hot pink highlights, and distinct syntax colors.
 
-![Midnight Mint preview with JavaScript, HTML, and CSS examples](https://raw.githubusercontent.com/marcimotoo/midnight-mint/main/images/midnight-mint-preview.png)
+![Midnight Mint preview with JavaScript, HTML, and CSS examples](https://raw.githubusercontent.com/marcimotoo/midnight-mint/cf980a3815e18d309d9b1428db0a4447a8c74565/images/midnight-mint-preview.png)
 
 Illustrated preview using the theme palette. Token colors may vary by language extension.
 
@@ -42,7 +42,7 @@ Other languages can use the shared rules when their grammar or language extensio
 
 ## More language previews
 
-![Midnight Mint preview with Python, JSON, and Markdown examples](https://raw.githubusercontent.com/marcimotoo/midnight-mint/main/images/midnight-mint-languages.png)
+![Midnight Mint preview with Python, JSON, and Markdown examples](https://raw.githubusercontent.com/marcimotoo/midnight-mint/cf980a3815e18d309d9b1428db0a4447a8c74565/images/midnight-mint-languages.png)
 
 Both images are illustrated editor previews using the theme palette. The first image shows JavaScript, HTML, and CSS; this image adds Python, JSON, and Markdown. TypeScript shares the JavaScript palette, with additional type and interface rules. The examples show representative colors, not a capture from a running editor. Language extensions and more specific token rules can affect actual highlighting.
 
