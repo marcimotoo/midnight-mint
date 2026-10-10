@@ -4,10 +4,6 @@ A dark Visual Studio Code theme with signature **mint #00FF99** accents, hot pin
 
 Two variants are included: **Midnight Mint** with hot pink accents and **Midnight Mint Soft** with gentler complementary syntax colors. Both keep signature mint **#00FF99** and the same dark interface.
 
-![Midnight Mint preview with JavaScript, HTML, and CSS examples](https://raw.githubusercontent.com/marcimotoo/midnight-mint/cf980a3815e18d309d9b1428db0a4447a8c74565/images/midnight-mint-preview.png)
-
-Illustrated preview using the theme palette. Token colors may vary by language extension.
-
 The interface uses quiet charcoal surfaces. Mint stands out in common code structures; complementary colors help separate functions, strings, attributes, and numbers.
 
 ## Syntax palette
@@ -42,21 +38,9 @@ The following overview was checked against the theme file. The examples have not
 
 Other languages can use the shared rules when their grammar or language extension reports matching token types. They are not individually verified here.
 
-## More language previews
-
-![Midnight Mint preview with Python, JSON, and Markdown examples](https://raw.githubusercontent.com/marcimotoo/midnight-mint/cf980a3815e18d309d9b1428db0a4447a8c74565/images/midnight-mint-languages.png)
-
-Both images are illustrated editor previews using the theme palette. The first image shows JavaScript, HTML, and CSS; this image adds Python, JSON, and Markdown. TypeScript shares the JavaScript palette, with additional type and interface rules. The examples show representative colors, not a capture from a running editor. Language extensions and more specific token rules can affect actual highlighting.
-
 ## Midnight Mint Soft
 
 Soft keeps keywords, tags, and selectors in the original mint. Functions and CSS property names use soft pink `#DF6AA3`; strings use muted orange `#D4B395`, numbers use soft gold `#C8BB8E`, and attributes use muted blue `#A4B9C9`. Parameters use pale blue `#B4C4CD`, and properties use soft pink `#D999B9`. Comments retain their muted gray-green.
-
-![Midnight Mint Soft preview with JavaScript, HTML, and CSS examples](https://raw.githubusercontent.com/marcimotoo/midnight-mint/cc511d1c3c5852791bd68272978244c501c65439/images/midnight-mint-soft-preview.png)
-
-![Midnight Mint Soft preview with Python, JSON, and Markdown examples](https://raw.githubusercontent.com/marcimotoo/midnight-mint/cc511d1c3c5852791bd68272978244c501c65439/images/midnight-mint-soft-languages.png)
-
-These are illustrated previews; the same language-extension limitations apply to both variants.
 
 ## Activate the theme
 
@@ -89,3 +73,27 @@ Packaging only creates the file; it does not publish it. Upload the resulting VS
 Created by **Marcimoto**. Baseline colors and TextMate rules include material from Microsoft Visual Studio Code. Its MIT license notice is included in `THIRD-PARTY-NOTICES.txt`.
 
 The Midnight Mint icon and Marcimoto branding are excluded from the theme's MIT license. See `LICENSE.txt` for usage terms.
+
+## Previews
+
+Illustrated editor previews using the theme palette. Actual highlighting can vary by language extension. TypeScript shares the JavaScript palette with additional type and interface rules.
+
+### Midnight Mint
+
+JavaScript, HTML, and CSS
+
+![Midnight Mint preview with JavaScript, HTML, and CSS examples](https://raw.githubusercontent.com/marcimotoo/midnight-mint/cf980a3815e18d309d9b1428db0a4447a8c74565/images/midnight-mint-preview.png)
+
+Python, JSON, and Markdown
+
+![Midnight Mint preview with Python, JSON, and Markdown examples](https://raw.githubusercontent.com/marcimotoo/midnight-mint/cf980a3815e18d309d9b1428db0a4447a8c74565/images/midnight-mint-languages.png)
+
+### Midnight Mint Soft
+
+JavaScript, HTML, and CSS
+
+![Midnight Mint Soft preview with JavaScript, HTML, and CSS examples](https://raw.githubusercontent.com/marcimotoo/midnight-mint/cc511d1c3c5852791bd68272978244c501c65439/images/midnight-mint-soft-preview.png)
+
+Python, JSON, and Markdown
+
+![Midnight Mint Soft preview with Python, JSON, and Markdown examples](https://raw.githubusercontent.com/marcimotoo/midnight-mint/cc511d1c3c5852791bd68272978244c501c65439/images/midnight-mint-soft-languages.png)
