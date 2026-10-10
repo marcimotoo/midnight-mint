@@ -1,10 +1,14 @@
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 import json
+import sys
 
 root = Path(__file__).resolve().parents[1]
 package = root
-theme = json.loads((package / 'themes/midnight-mint-color-theme.json').read_text(encoding='utf-8'))
+soft = '--soft' in sys.argv
+suffix = '-soft' if soft else ''
+theme = json.loads((package / f'themes/midnight-mint{suffix}-color-theme.json').read_text(encoding='utf-8'))
+theme_name = theme['name']
 colors = theme['colors']
 tokens = theme['semanticTokenColors']
 palette = {'text': colors['editor.foreground'], 'mint': tokens['keyword'], 'pink': tokens['function'],
@@ -20,14 +24,15 @@ mono = ImageFont.truetype(str(fonts / 'consola.ttf'), 21)
 italic = ImageFont.truetype(str(fonts / 'consolai.ttf'), 21)
 bold = ImageFont.truetype(str(fonts / 'consolab.ttf'), 21)
 draw.rounded_rectangle((64, 58, 72, 126), 4, fill=palette['mint'])
-draw.text((96, 49), 'Midnight Mint', font=title, fill='#f0f5f2')
-draw.text((98, 130), 'Dark charcoal. Clear syntax. A quiet touch of neon.', font=label, fill='#a0aca4')
+draw.text((96, 49), theme_name, font=title, fill='#f0f5f2')
+subtitle = 'Signature mint #00FF99. Softer pink, orange, gold and blue.' if soft else 'Dark charcoal. Clear syntax. A quiet touch of neon.'
+draw.text((98, 130), subtitle, font=label, fill='#a0aca4')
 
 # Explicit token spans keep the code legible and use the theme's actual palette.
 js = [
  [('comment', '// A little light after midnight')],
  [('mint', 'const'), ('text', ' theme = {')],
- [('text', '  name: '), ('orange', '"Midnight Mint"'), ('text', ',')],
+ [('text', '  name: '), ('orange', f'"{theme_name}"'), ('text', ',')],
  [('text', '  accent: '), ('orange', '"#00ff99"'), ('text', ',')],
  [('text', '  contrast: '), ('gold', '4.5')],
  [('text', '};')], [],
@@ -40,7 +45,7 @@ js = [
 html = [
  [('comment', '<!-- Keep the focus on content -->')],
  [('text', '<'), ('mint', 'main'), ('blue', ' class'), ('text', '='), ('orange', '"card"'), ('text', '>')],
- [('text', '  <'), ('mint', 'h1'), ('text', '>Midnight Mint</'), ('mint', 'h1'), ('text', '>')],
+ [('text', '  <'), ('mint', 'h1'), ('text', f'>{theme_name}</'), ('mint', 'h1'), ('text', '>')],
  [('text', '  <'), ('mint', 'p'), ('blue', ' class'), ('text', '='), ('orange', '"subtitle"'), ('text', '>')],
  [('text', '    Less noise. More focus.')],
  [('text', '  </'), ('mint', 'p'), ('text', '>')], [],
@@ -91,12 +96,14 @@ for index, (token, caption) in enumerate([('mint', 'Keywords / Tags / Selectors'
     y = 875 + (index // 3) * 44
     draw.rounded_rectangle((x, y + 6, x + 20, y + 26), 5, fill=palette[token])
     draw.text((x + 33, y), caption, font=small, fill='#d7dfd9')
-draw.text((70, 964), 'Visual Studio Code theme  /  Midnight Mint', font=small, fill='#a0aca4')
+draw.text((70, 964), f'Visual Studio Code theme  /  {theme_name}', font=small, fill='#a0aca4')
 draw.text((70, 1004), 'Illustrated preview using the theme palette. Token colors may vary by language extension.', font=small, fill='#82948a')
 (package / 'images').mkdir(exist_ok=True)
-image.save(package / 'images/midnight-mint-preview.png', optimize=True)
+image.save(package / f'images/midnight-mint{suffix}-preview.png', optimize=True)
 
 palette.update({'lavender': '#c2a4e8', 'link': '#83dbb8', 'raw': '#ce9178', 'mdBold': '#e8eee9', 'mdItalic': '#bfcec4', 'mdHeading': '#00ff99'})
+if soft:
+    palette.update({'lavender': '#b9a8cc', 'link': '#9bc8b5', 'raw': '#c4ac99'})
 python_lines = [
  [('comment', '# A little light after midnight')],
  [('mint', 'class '), ('mint', 'Palette'), ('text', ':')],
@@ -109,7 +116,7 @@ python_lines = [
 ]
 json_lines = [
  [('text', '{')],
- [('blue', '  "name"'), ('text', ': '), ('orange', '"Midnight Mint"'), ('text', ',')],
+ [('blue', '  "name"'), ('text', ': '), ('orange', f'"{theme_name}"'), ('text', ',')],
  [('blue', '  "accent"'), ('text', ': '), ('orange', '"#00ff99"'), ('text', ',')],
  [('blue', '  "fontSize"'), ('text', ': '), ('gold', '14'), ('text', ',')],
  [('blue', '  "enabled"'), ('text', ': '), ('lavender', 'true'), ('text', ',')],
@@ -122,7 +129,7 @@ json_lines = [
  [('text', '}')],
 ]
 markdown_lines = [
- [('mdHeading', '# Midnight Mint')], [],
+ [('mdHeading', f'# {theme_name}')], [],
  [('text', 'Less noise. More focus.')], [],
  [('text', 'Write with '), ('mdBold', '**clarity**')],
  [('text', 'and '), ('mdItalic', '*a little color*'), ('text', '.')], [],
@@ -135,4 +142,4 @@ draw.rectangle((60, 210, 1760, 835), fill='#101313')
 draw.rectangle((95, 128, 1740, 170), fill='#101313')
 draw.text((98, 130), 'Python, JSON & Markdown / The same palette, more languages.', font=label, fill='#a0aca4')
 render_cards([('palette.py', 'Python', python_lines), ('settings.json', 'JSON', json_lines), ('notes.md', 'Markdown', markdown_lines)])
-image.save(package / 'images/midnight-mint-languages.png', optimize=True)
+image.save(package / f'images/midnight-mint{suffix}-languages.png', optimize=True)

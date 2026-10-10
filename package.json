@@ -40,6 +40,11 @@
         "label": "Midnight Mint",
         "uiTheme": "vs-dark",
         "path": "./themes/midnight-mint-color-theme.json"
+      },
+      {
+        "label": "Midnight Mint Soft",
+        "uiTheme": "vs-dark",
+        "path": "./themes/midnight-mint-soft-color-theme.json"
       }
     ]
   },

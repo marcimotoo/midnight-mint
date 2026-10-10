@@ -2,6 +2,8 @@
 
 A dark Visual Studio Code theme with signature **mint #00FF99** accents, hot pink highlights, and distinct syntax colors.
 
+Two variants are included: **Midnight Mint** with hot pink accents and **Midnight Mint Soft** with gentler complementary syntax colors. Both keep signature mint **#00FF99** and the same dark interface.
+
 ![Midnight Mint preview with JavaScript, HTML, and CSS examples](https://raw.githubusercontent.com/marcimotoo/midnight-mint/cf980a3815e18d309d9b1428db0a4447a8c74565/images/midnight-mint-preview.png)
 
 Illustrated preview using the theme palette. Token colors may vary by language extension.
@@ -46,11 +48,21 @@ Other languages can use the shared rules when their grammar or language extensio
 
 Both images are illustrated editor previews using the theme palette. The first image shows JavaScript, HTML, and CSS; this image adds Python, JSON, and Markdown. TypeScript shares the JavaScript palette, with additional type and interface rules. The examples show representative colors, not a capture from a running editor. Language extensions and more specific token rules can affect actual highlighting.
 
+## Midnight Mint Soft
+
+Soft keeps keywords, tags, and selectors in the original mint. Functions and CSS property names use soft pink `#DF6AA3`; strings use muted orange `#D4B395`, numbers use soft gold `#C8BB8E`, and attributes use muted blue `#A4B9C9`. Parameters use pale blue `#B4C4CD`, and properties use soft pink `#D999B9`. Comments retain their muted gray-green.
+
+![Midnight Mint Soft preview with JavaScript, HTML, and CSS examples](https://raw.githubusercontent.com/marcimotoo/midnight-mint/main/images/midnight-mint-soft-preview.png)
+
+![Midnight Mint Soft preview with Python, JSON, and Markdown examples](https://raw.githubusercontent.com/marcimotoo/midnight-mint/main/images/midnight-mint-soft-languages.png)
+
+These are illustrated previews; the same language-extension limitations apply to both variants.
+
 ## Activate the theme
 
 1. Install **Midnight Mint**.
 2. Open the Command Palette with `Ctrl+Shift+P` on Windows/Linux or `Cmd+Shift+P` on macOS.
-3. Run **Preferences: Color Theme** and choose **Midnight Mint**.
+3. Run **Preferences: Color Theme** and choose **Midnight Mint** or **Midnight Mint Soft**.
 
 ## Use it across devices
 
@@ -64,9 +76,11 @@ You can override individual colors through `workbench.colorCustomizations`, `edi
 
 Use Node.js 24 and npm to install the packaging tool with `npm ci`. Run `npm run package` to create a VSIX in the repository root. Generated VSIX files and installed dependencies are excluded from Git.
 
-Edit `themes/midnight-mint-color-theme.json` to change the colors. Keep the extension name `midnight-mint` and publisher `marcimoto` unchanged so Marketplace updates continue to match the existing extension. Increase the version in `package.json` and update `CHANGELOG.md` before uploading a new VSIX.
+Edit `themes/midnight-mint-color-theme.json` for the original variant or `themes/midnight-mint-soft-color-theme.json` for Soft. Keep the extension name `midnight-mint` and publisher `marcimoto` unchanged so Marketplace updates continue to match the existing extension. Increase the version in `package.json` and update `CHANGELOG.md` before uploading a new VSIX.
 
 `icon.png` is the Marketplace icon. `images/` contains the illustrated previews. Their source is `scripts/render-previews.py`; it requires Python, Pillow, and Windows fonts (Segoe UI and Consolas). Run it from the repository to regenerate both images, then review the results. Syntax examples use explicit token spans, so new token roles or palette changes may also require changes to the renderer.
+
+Use `python scripts/render-previews.py` for the original variant and `python scripts/render-previews.py --soft` for Soft. README image links point to specific Git revisions to prevent stale previews; update the corresponding links after committing changed images.
 
 Packaging only creates the file; it does not publish it. Upload the resulting VSIX as an update through the Marketplace publisher management page.
 
