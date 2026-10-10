@@ -2,7 +2,7 @@
 
 ## 1.0.0
 
-- Initial release of Midnight Mint Studio.
+- Initial release of Midnight Theme Studio.
 - Dark charcoal interface with mint accents.
 - Optional Midnight Mint Soft variant with unchanged signature mint and softer complementary syntax colors.
 - Distinct syntax colors for JavaScript, TypeScript, HTML, CSS, and other languages.
