@@ -1,0 +1,58 @@
+{
+  "name": "midnight-mint",
+  "displayName": "Midnight Mint",
+  "description": "A dark theme with signature mint accents, hot pink highlights, and distinct syntax colors.",
+  "version": "1.0.2",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marcimotoo/midnight-mint.git"
+  },
+  "homepage": "https://github.com/marcimotoo/midnight-mint#readme",
+  "bugs": {
+    "url": "https://github.com/marcimotoo/midnight-mint/issues"
+  },
+  "scripts": {
+    "package": "vsce package --no-dependencies --out ."
+  },
+  "devDependencies": {
+    "@vscode/vsce": "4.0.0"
+  },
+  "files": [
+    "themes/**",
+    "images/**",
+    "icon.png",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE.txt",
+    "THIRD-PARTY-NOTICES.txt"
+  ],
+  "publisher": "marcimoto",
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Midnight Mint",
+        "uiTheme": "vs-dark",
+        "path": "./themes/midnight-mint-color-theme.json"
+      }
+    ]
+  },
+  "icon": "icon.png",
+  "keywords": [
+    "theme",
+    "dark",
+    "mint",
+    "marcimoto",
+    "pink"
+  ],
+  "galleryBanner": {
+    "theme": "dark",
+    "color": "#191d1c"
+  }
+}
