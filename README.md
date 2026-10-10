@@ -52,9 +52,9 @@ Both images are illustrated editor previews using the theme palette. The first i
 
 Soft keeps keywords, tags, and selectors in the original mint. Functions and CSS property names use soft pink `#DF6AA3`; strings use muted orange `#D4B395`, numbers use soft gold `#C8BB8E`, and attributes use muted blue `#A4B9C9`. Parameters use pale blue `#B4C4CD`, and properties use soft pink `#D999B9`. Comments retain their muted gray-green.
 
-![Midnight Mint Soft preview with JavaScript, HTML, and CSS examples](https://raw.githubusercontent.com/marcimotoo/midnight-mint/main/images/midnight-mint-soft-preview.png)
+![Midnight Mint Soft preview with JavaScript, HTML, and CSS examples](https://raw.githubusercontent.com/marcimotoo/midnight-mint/cc511d1c3c5852791bd68272978244c501c65439/images/midnight-mint-soft-preview.png)
 
-![Midnight Mint Soft preview with Python, JSON, and Markdown examples](https://raw.githubusercontent.com/marcimotoo/midnight-mint/main/images/midnight-mint-soft-languages.png)
+![Midnight Mint Soft preview with Python, JSON, and Markdown examples](https://raw.githubusercontent.com/marcimotoo/midnight-mint/cc511d1c3c5852791bd68272978244c501c65439/images/midnight-mint-soft-languages.png)
 
 These are illustrated previews; the same language-extension limitations apply to both variants.
 
