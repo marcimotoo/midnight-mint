@@ -70,7 +70,7 @@ You can override individual colors through `workbench.colorCustomizations`, `edi
 
 Use Node.js 24 and npm to install the packaging tool with `npm ci`. Run `npm run package` to create a VSIX in the repository root. Generated VSIX files and installed dependencies are excluded from Git.
 
-Edit `themes/midnight-mint-color-theme.json` for the original variant or `themes/midnight-mint-soft-color-theme.json` for Soft. Keep the extension name `midnight-mint-theme` and publisher `marcimoto` unchanged so Marketplace updates continue to match the existing extension. Increase the version in `package.json` and update `CHANGELOG.md` before uploading a new VSIX.
+Edit `themes/midnight-mint-color-theme.json` for the original variant or `themes/midnight-mint-soft-color-theme.json` for Soft. Keep the extension name `midnight-mint` and publisher `marcimoto` unchanged so Marketplace updates continue to match the existing extension. Increase the version in `package.json` and update `CHANGELOG.md` before uploading a new VSIX.
 
 `icon.png` is the Marketplace icon. `images/` contains the illustrated previews. Their source is `scripts/render-previews.py`; it requires Python, Pillow, and Windows fonts (Segoe UI and Consolas). Run it from the repository to regenerate both images, then review the results. Syntax examples use explicit token spans, so new token roles or palette changes may also require changes to the renderer.
 
