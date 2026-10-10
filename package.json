@@ -1,8 +1,8 @@
 {
   "name": "midnight-theme-studio",
   "displayName": "Midnight Theme Studio",
-  "description": "A dark theme with signature mint accents, hot pink highlights, and distinct syntax colors.",
-  "version": "1.0.0",
+  "description": "Dark themes with clear syntax colors, mint accents, and vibrant or soft palettes.",
+  "version": "1.0.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/marcimotoo/midnight-mint.git"
@@ -50,11 +50,23 @@
   },
   "icon": "icon.png",
   "keywords": [
+    "midnight",
     "theme",
+    "color-theme",
     "dark",
+    "dark-theme",
     "mint",
-    "marcimoto",
-    "pink"
+    "green",
+    "pink",
+    "soft",
+    "syntax-highlighting",
+    "javascript",
+    "typescript",
+    "python",
+    "html",
+    "css",
+    "json",
+    "markdown"
   ],
   "galleryBanner": {
     "theme": "dark",

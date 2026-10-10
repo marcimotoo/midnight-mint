@@ -10,7 +10,7 @@
 
 Illustrated previews with JavaScript, HTML, and CSS. Actual highlighting can vary by language extension.
 
-A dark Visual Studio Code theme with signature **mint #00FF99** accents, hot pink highlights, and distinct syntax colors.
+Dark Visual Studio Code themes with clear syntax colors, **mint #00FF99** accents, and vibrant or soft palettes.
 
 Two variants are included: **Midnight Mint** with hot pink accents and **Midnight Mint Soft** with gentler complementary syntax colors. Both keep signature mint **#00FF99** and the same dark interface.
 

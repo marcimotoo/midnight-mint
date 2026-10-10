@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.1
+
+- Expand relevant Marketplace keywords and clarify the collection description.
+- Theme colors remain unchanged.
+
 ## 1.0.0
 
 - Initial release of Midnight Theme Studio.
