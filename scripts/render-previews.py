@@ -86,10 +86,11 @@ def render_cards(examples):
 
 render_cards([('hello.js', 'JavaScript', js), ('index.html', 'HTML', html), ('theme.css', 'CSS', css)])
 
-for index, (token, caption) in enumerate([('mint', 'Mint'), ('pink', 'Hot pink'), ('orange', 'Strings'), ('gold', 'Numbers'), ('blue', 'Attributes'), ('comment', 'Comments')]):
-    x = 70 + index * 286
-    draw.rounded_rectangle((x, 885, x + 20, 905), 5, fill=palette[token])
-    draw.text((x + 33, 878), caption, font=label, fill='#d7dfd9')
+for index, (token, caption) in enumerate([('mint', 'Keywords / Tags / Selectors'), ('pink', 'Functions / CSS Properties'), ('orange', 'Strings'), ('gold', 'Numbers'), ('blue', 'Attributes'), ('comment', 'Comments')]):
+    x = 70 + (index % 3) * 572
+    y = 875 + (index // 3) * 44
+    draw.rounded_rectangle((x, y + 6, x + 20, y + 26), 5, fill=palette[token])
+    draw.text((x + 33, y), caption, font=small, fill='#d7dfd9')
 draw.text((70, 964), 'Visual Studio Code theme  /  Midnight Mint', font=small, fill='#a0aca4')
 draw.text((70, 1004), 'Illustrated preview using the theme palette. Token colors may vary by language extension.', font=small, fill='#82948a')
 (package / 'images').mkdir(exist_ok=True)
